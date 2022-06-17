@@ -1,0 +1,46 @@
+<html>
+
+<head>
+<style>
+button {
+	width: 27px;
+}
+</style>
+</head>
+
+<body>
+
+<button id=1 onclick="button_clicked(this)">_</button>
+<button id=2 onclick="button_clicked(this)">_</button>
+<button id=3 onclick="button_clicked(this)">_</button>
+<br>
+<button id=4 onclick="button_clicked(this)">_</button>
+<button id=5 onclick="button_clicked(this)">_</button>
+<button id=6 onclick="button_clicked(this)">_</button>
+<br>
+<button id=7 onclick="button_clicked(this)">_</button>
+<button id=8 onclick="button_clicked(this)">_</button>
+<button id=9 onclick="button_clicked(this)">_</button>
+
+
+<script>
+
+var next_piece = 'X'
+
+function button_clicked(button) {
+	var id = button.id
+	var label = button.textContent
+	alert(`You clicked button with id ${id} and label '${label}'.\nChanging label to '${next_piece}'.`)
+
+	button.textContent = next_piece
+	if (next_piece === 'X') {
+		next_piece = 'O'
+	} else {
+		next_piece = 'X'
+	}
+}
+
+</script>
+
+</body>
+</html>
