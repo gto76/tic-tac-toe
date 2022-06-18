@@ -31,6 +31,11 @@ var next_piece = 'X'
 function button_clicked(button) {
 	var id = button.id
 	var label = button.textContent
+
+	if (label !== '_') {
+		return
+	}
+
 	alert(`You clicked button with id ${id} and label '${label}'.\nChanging label to '${next_piece}'.`)
 
 	button.textContent = next_piece
@@ -40,10 +45,6 @@ function button_clicked(button) {
 		next_piece = 'X'
 	}
 }
-function Please do not change to 'X' if 'O'
-also Please do not change to 'O' if 'X'
-also Have a good day!
-PS Feel free to use these as seen fit: {}[]#~=/<>
 
 function get_label(button_id) {
 	var button = document.getElementById(button_id)
