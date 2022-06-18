@@ -10,5 +10,5 @@
 		...
 	}
 	```
-- [ ] Crete is_filled() function that will return true if there are no more free cells and true otherwise.
+- [ ] Crete is_filled() function that will return true if there are no more free cells and false otherwise.
 - [ ] Create get_winner() function that will return 'X', 'O' or none, indicating the winner.
