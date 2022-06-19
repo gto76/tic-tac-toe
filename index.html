@@ -3,8 +3,8 @@
 <head>
 <style>
 button {
-	width: 27px;
-	margin-top: 3px;
+    width: 27px;
+    margin-top: 3px;
 }
 </style>
 </head>
@@ -30,29 +30,28 @@ button {
 var next_piece = 'X'                 // This line assigns 'X' to variable called next_piece.
 
 function button_clicked(button) {    // This function is called every time a button is pressed.
-	var id = button.id               // This line assigns button's id to variable called id.
-	var label = button.textContent   // This line assigns button's text to variable called label.
+    var id = button.id               // This line assigns button's id to variable called id.
+    var label = button.textContent   // This line assigns button's text to variable called label.
 
-	if (label !== '_') {             // Code between curly brackets executes if label is not '_'.
-		return                       // Exits the function.
-	}
+    if (label !== '_') {             // Code between curly brackets executes if label is not '_'.
+        return                       // Exits the function.
+    }
 
+    alert(`You clicked button with id ${id} and label '${label}'.\nChanging label to '${next_piece}'.`)
 
-	alert(`You clicked button with id ${id} and label '${label}'.\nChanging label to '${next_piece}'.`)
-
-	button.textContent = next_piece  // Changes button's text to value of variable next_piece.
-	if (next_piece === 'X') {        // Code between curly brackets executes if next_piece is 'X'.
-		next_piece = 'O'             // This line assigns 'O' to variable called next_piece.
-	} else {                         // Code between curly brackets executes if next_piece is not 'X'.
-		next_piece = 'X'             // This line assigns 'X' to variable called next_piece.
-	}
+    button.textContent = next_piece  // Changes button's text to value of variable next_piece.
+    if (next_piece === 'X') {        // Code between curly brackets executes if next_piece is 'X'.
+        next_piece = 'O'             // This line assigns 'O' to variable called next_piece.
+    } else {                         // Code between curly brackets executes if next_piece is not 'X'.
+        next_piece = 'X'             // This line assigns 'X' to variable called next_piece.
+    }
 }
 
 
 
 function get_label(button_id) {      // Usage example: var label_of_first_button = get_label(1)
-	var button = document.getElementById(button_id)  // Assigns a button object to variable called button.
-	return button.textContent                        // Exits the function and returns button's text.
+    var button = document.getElementById(button_id)  // Assigns a button object to variable called button.
+    return button.textContent                        // Exits the function and returns button's text.
 }
 
 </script>
