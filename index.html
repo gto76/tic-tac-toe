@@ -37,9 +37,12 @@ function button_clicked(button) {    // This function is called every time a but
         return                       // Exits the function.
     }
 
-    alert(`You clicked button with id ${id} and label '${label}'.\nChanging label to '${next_piece}'.`)
-
     button.textContent = next_piece  // Changes button's text to value of variable next_piece.
+
+    alert(`You clicked button with id ${id} and label '${label}'.\n` +
+          `Changing label to '${next_piece}'.\n` +
+          `Function is_filled() returned ${is_filled()}.`)
+
     if (next_piece === 'X') {        // Code between curly brackets executes if next_piece is 'X'.
         next_piece = 'O'             // This line assigns 'O' to variable called next_piece.
     } else {                         // Code between curly brackets executes if next_piece is not 'X'.
@@ -47,11 +50,18 @@ function button_clicked(button) {    // This function is called every time a but
     }
 }
 
-
-
 function get_label(button_id) {      // Usage example: var label_of_first_button = get_label(1)
     var button = document.getElementById(button_id)  // Assigns a button object to variable called button.
     return button.textContent                        // Exits the function and returns button's text.
+}
+
+function is_filled() {                // Returns true if there are no more free cells, false otherwise.
+    for (let id of [1, 2, 3, 4, 5, 6, 7, 8, 9]) {
+        if (get_label(id) === '_') {  // Exits function and returns false if button with id id contains '_'.
+            return false
+        }
+    }
+    return true                       // Exits the function and returns true.
 }
 
 </script>
