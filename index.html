@@ -47,11 +47,14 @@ function button_clicked(button) {    // This function is called every time a but
     }
 }
 
-
-
-function get_label(button_id) {      // Usage example: var label_of_first_button = get_label(1)
+function get_label(button_id) {                      // Usage example: var label = get_label(1)
     var button = document.getElementById(button_id)  // Assigns a button object to variable called button.
     return button.textContent                        // Exits the function and returns button's text.
+}
+
+function set_label(button_id, text) {                // Usage example: set_label(1, 'X')
+    var button = document.getElementById(button_id)  // Assigns a button object to variable called button.
+    button.textContent = text                        // Changes button's label to text.
 }
 
 </script>
