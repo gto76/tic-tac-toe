@@ -26,7 +26,7 @@ button {
 
 <script>
 
-
+var DEBUG = false                    // This line assigns false to variable called debug.
 var next_piece = 'X'                 // This line assigns 'X' to variable called next_piece.
 
 function button_clicked(button) {    // This function is called every time a button is pressed.
@@ -37,7 +37,9 @@ function button_clicked(button) {    // This function is called every time a but
         return                       // Exits the function.
     }
 
-    alert(`You clicked button with id ${id} and label '${label}'.\nChanging label to '${next_piece}'.`)
+    if (DEBUG) {
+        alert(`You clicked button with id ${id} and label '${label}'.\nChanging label to '${next_piece}'.`)
+    }
 
     button.textContent = next_piece  // Changes button's text to value of variable next_piece.
     if (next_piece === 'X') {        // Code between curly brackets executes if next_piece is 'X'.
