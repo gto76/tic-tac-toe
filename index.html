@@ -47,11 +47,15 @@ function button_clicked(button) {    // This function is called every time a but
     }
 }
 
-
-
 function get_label(button_id) {      // Usage example: var label_of_first_button = get_label(1)
     var button = document.getElementById(button_id)  // Assigns a button object to variable called button.
     return button.textContent                        // Exits the function and returns button's text.
+}
+
+function reset() {                                 // Sets all button's labels to '_'.
+    for (let id of [1, 2, 3, 4, 5, 6, 7, 8, 9]) {  // Executes code 9 times, each time with different id.
+        set_label(id, '_')                         // Sets text of button with id to '_'.
+    }    
 }
 
 </script>
