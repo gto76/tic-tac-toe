@@ -2,7 +2,7 @@
 
 <head>
 <style>
-button {
+.cell {
     width: 27px;
     margin-top: 3px;
 }
@@ -11,17 +11,19 @@ button {
 
 <body>
 
-<button id=1 onclick="button_clicked(this)">_</button>
-<button id=2 onclick="button_clicked(this)">_</button>
-<button id=3 onclick="button_clicked(this)">_</button>
+<button class=cell id=1 onclick="button_clicked(this)">_</button>
+<button class=cell id=2 onclick="button_clicked(this)">_</button>
+<button class=cell id=3 onclick="button_clicked(this)">_</button>
 <br>
-<button id=4 onclick="button_clicked(this)">_</button>
-<button id=5 onclick="button_clicked(this)">_</button>
-<button id=6 onclick="button_clicked(this)">_</button>
+<button class=cell id=4 onclick="button_clicked(this)">_</button>
+<button class=cell id=5 onclick="button_clicked(this)">_</button>
+<button class=cell id=6 onclick="button_clicked(this)">_</button>
 <br>
-<button id=7 onclick="button_clicked(this)">_</button>
-<button id=8 onclick="button_clicked(this)">_</button>
-<button id=9 onclick="button_clicked(this)">_</button>
+<button class=cell id=7 onclick="button_clicked(this)">_</button>
+<button class=cell id=8 onclick="button_clicked(this)">_</button>
+<button class=cell id=9 onclick="button_clicked(this)">_</button>
+<br><br>
+<button onclick="reset()">Reset</button>
 
 
 <script>
