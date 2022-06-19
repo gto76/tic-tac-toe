@@ -22,11 +22,11 @@ button {
 <button id=7 onclick="button_clicked(this)">_</button>
 <button id=8 onclick="button_clicked(this)">_</button>
 <button id=9 onclick="button_clicked(this)">_</button>
-
+<br><br>
+<input id=10 type="checkbox">DEBUG</input>
 
 <script>
 
-var DEBUG = false                    // This line assigns false to variable called debug.
 var next_piece = 'X'                 // This line assigns 'X' to variable called next_piece.
 
 function button_clicked(button) {    // This function is called every time a button is pressed.
@@ -37,7 +37,7 @@ function button_clicked(button) {    // This function is called every time a but
         return                       // Exits the function.
     }
 
-    if (DEBUG) {
+    if (document.getElementById(10).checked) {  // Shows debugging message if DEBUG checkbox is checked.
         alert(`You clicked button with id ${id} and label '${label}'.\nChanging label to '${next_piece}'.`)
     }
 
